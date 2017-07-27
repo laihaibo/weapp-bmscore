@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="games-filter">
+    <picker bindchange="setFilter" value="{{index}}" range="{{props.store.filters}}" range-key="{{'name'}}">
+      <view class="picker">
+        选择查看：{{props.store.filters[index]}}
+      </view>
+    </picker>
+    <view>{{props.store.filters[props.store.filter].name}}</view>
+  </view>
+  <view class="games-list">
+    <view class="games-item" wx:for="{{props.store.filterGames}}" wx:key="{{item.id}}">
+      <view class="games">{{item.id}}:{{item.player1Name}} <icon wx:if="{{item.player1 === item.winner}}" type="success" size="20" color="green"/> vs  {{item.player2Name}}  <icon wx:if="{{item.player2 === item.winner}}" type="success" size="20" color="green"/></view>
+    </view>
+  </view>
+</view>

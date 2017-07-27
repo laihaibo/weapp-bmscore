@@ -1,0 +1,22 @@
+.games-filter {
+  display:flex;
+}
+
+.games-list {
+  flex: 0 1 70%;
+  width:100%;
+}
+
+.games-list .games-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rpx 120rpx;
+}
+
+.games-list .games-item .games {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+}

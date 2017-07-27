@@ -1,0 +1,56 @@
+.router-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex: 0 1 20%;
+}
+
+.add-game {
+  flex: 0 1 70%;
+  width: 100%;
+}
+
+.add-player-bar {
+  margin: 20rpx 0;
+}
+
+.add-players {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 20rpx;
+  width:100%;
+}
+
+.add-players .checkbox {
+  flex: 0 1 33.33%;
+  display: inline-flex;
+  align-items: center;
+  margin: 5rpx 0;
+}
+
+.current-game {
+  flex: 0 1 40%;
+}
+
+.operation-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.operation-btns button:nth-child(1) {
+  flex: 0 1 auto;
+}
+
+.operation-btns button:nth-child(2) {
+  flex: 0 1 auto;
+}
+
+.operation-btns button:nth-child(3) {
+  flex: 0 1 100%;
+  margin: 20rpx 40rpx;
+}
+

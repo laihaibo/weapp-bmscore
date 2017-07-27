@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="router-btns">
+    <button bindtap="addPlayer">新增玩家</button>
+    <button bindtap="gameHistory">历史纪录</button>
+  </view>
+  <view class="add-game" wx:if="{{props.store.hidden.showAddGame}}">
+    <view class="add-player-bar">请选择玩家：</view>
+    <checkbox-group class="add-players" bindchange="setCurrentPlayers">
+      <label class="checkbox" wx:for="{{props.store.onGamePlayers}}" wx:key="{{item.id}}">
+        <checkbox value="{{item.id}}" checked="{{checked}}"/>{{item.name}}
+      </label>
+    </checkbox-group>
+    
+    <button type="primary" bindtap="addGame">新增比赛</button>
+  </view>
+  <view class="current-game" wx:if="{{props.store.hidden.showCurrentGame}}">
+    <text class="log-item">{{props.store.currentPlayers[0].name}} vs {{props.store.currentPlayers[1].name}}</text>
+    <view wx:for="{{props.store.currentGame.rounds}}" wx:key="{{index}}">
+      <view>round {{index+1}}:  <text>{{item.player1}} : {{item.player2}}</text>
+      </view>
+     </view>
+  </view>
+  <view class="operation-btns" wx:if="{{props.store.hidden.showAddScore}}">
+    <button type="primary" disabled="{{props.store.hidden.disableAddScore}}" bindtap="addScore" data-whoget="1"> player1得分 </button>
+    <button type="warn" disabled="{{props.store.hidden.disableAddScore}}" bindtap="addScore" data-whoget="2"> player2得分 </button>
+    <button disabled="{{props.store.hidden.disableAddScore}}" bindtap="giveUpGame"> 放弃比赛 </button>
+  </view>
+</view>

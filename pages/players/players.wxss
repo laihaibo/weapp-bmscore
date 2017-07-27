@@ -1,0 +1,12 @@
+.players-list {
+  flex: 0 1 70%;
+  width:100%;
+}
+
+.players-list .players-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 5rpx 120rpx;
+}
+

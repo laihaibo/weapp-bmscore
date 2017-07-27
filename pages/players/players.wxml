@@ -1,0 +1,14 @@
+<view class="container">
+  <form class="add-player" bindsubmit="addPlayer">
+    <input name="player" value="{{name}}" class="player-input" placeholder="输入新玩家姓名"/>
+    <button formType="submit">提交</button>
+  </form>
+
+   <view class="players-list">
+    <view class="players-item" wx:for="{{props.store.onGamePlayers}}" wx:key="{{item.id}}">
+      <text class="players">{{index}}:{{item.name}}</text>
+      <icon bindtap="removePlayer" data-removeid="{{item.id}}" type="cancel" size="20" color="red"/>
+    </view>
+  </view> 
+</view>
+

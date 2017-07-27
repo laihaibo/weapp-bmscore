@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/players/players",
+    "pages/games/games"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ddd",
+    "navigationBarTitleText": "BMScore",
+    "navigationBarTextStyle":"black"
+  },
+  "debug": false
+}
